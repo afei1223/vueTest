@@ -26,7 +26,10 @@ export default {
     ChangeMenu (index) {
       switch (index) {
         case 0:
-          this.$router.push({path: '/Login'})
+          this.$router.push({path: '/Login', query: {username: this.message1}})
+          break
+        case 1:
+          this.$router.push({name: 'login', params: {username: this.username}})
           break
       }
     }
