@@ -24,21 +24,21 @@ export default {
     }
 
   },
-  created:{
-    if(usernameParams != null){
-      this.seen_params = true;
+  beforeCreate () {
+    if (this.usernameParams != null) {
+      this.seen_params = true
     }
-    if(usernameQuery!=null){
-      this.seen_query = true;
+    if (this.usernameQuery != null) {
+      this.seen_query = true
     }
-  }
+  },
   data () {
     return {
       menuList: ['登陆/注册', '首页', '好友', '群组'],
       seen: false,
       id: '',
       password: '',
-      seen_params: fasle,
+      seen_params: false,
       seen_query: false
     }
   },
